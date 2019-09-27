@@ -1,2 +1,2 @@
-# 2019-2-Track-Frontend-S-Shavrin
-Учебный проект
+# Track Mail 2019 Shavros
+
