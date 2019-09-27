@@ -13,7 +13,7 @@
  */
 
 export default function convertBytesToHuman(bytes) {
-  if(typeof bytes != "number" || bytes < 0 || bytes == Infinity) {
+  if(typeof bytes != "number" || bytes < 0 || bytes == Infinity || !Number.isInteger(bytes)) {
     return false;
   } else if (bytes >= 0 && bytes < 1024) {
     return (`${bytes} B`)

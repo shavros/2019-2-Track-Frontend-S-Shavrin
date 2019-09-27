@@ -16,6 +16,7 @@ test('Возвращает false для неправильного типа да
   expect(convertBytesToHuman(null)).toBe(false)
   expect(convertBytesToHuman(true)).toBe(false)
   expect(convertBytesToHuman(false)).toBe(false)
+  expect(convertBytesToHuman(1.25)).toBe(false)
 })
 
 test('Возвращает false для Infinity', () => {
