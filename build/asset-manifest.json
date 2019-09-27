@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/track-mail-2019-shavros/static/css/main.b4eae362.chunk.css",
+    "main.js": "/track-mail-2019-shavros/static/js/main.c57e3593.chunk.js",
+    "main.js.map": "/track-mail-2019-shavros/static/js/main.c57e3593.chunk.js.map",
+    "runtime-main.js": "/track-mail-2019-shavros/static/js/runtime-main.b231a588.js",
+    "runtime-main.js.map": "/track-mail-2019-shavros/static/js/runtime-main.b231a588.js.map",
+    "static/js/2.27e91468.chunk.js": "/track-mail-2019-shavros/static/js/2.27e91468.chunk.js",
+    "static/js/2.27e91468.chunk.js.map": "/track-mail-2019-shavros/static/js/2.27e91468.chunk.js.map",
+    "index.html": "/track-mail-2019-shavros/index.html",
+    "precache-manifest.53c89470a0edc94feef90928754e20d3.js": "/track-mail-2019-shavros/precache-manifest.53c89470a0edc94feef90928754e20d3.js",
+    "service-worker.js": "/track-mail-2019-shavros/service-worker.js",
+    "static/css/main.b4eae362.chunk.css.map": "/track-mail-2019-shavros/static/css/main.b4eae362.chunk.css.map",
+    "static/media/logo.svg": "/track-mail-2019-shavros/static/media/logo.795fb555.svg"
+  }
+}

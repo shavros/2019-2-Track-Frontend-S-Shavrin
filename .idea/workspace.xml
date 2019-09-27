@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="867b023b-eb2e-4318-b3d0-86c1f4c8dd2d" name="Default Changelist" comment="" />
+    <list default="true" id="867b023b-eb2e-4318-b3d0-86c1f4c8dd2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/convertBytesToHuman.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/convertBytesToHuman.test.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +45,7 @@
       <updated>1569585262902</updated>
       <workItem from="1569585265055" duration="1508000" />
       <workItem from="1569604800794" duration="1032000" />
+      <workItem from="1569613566311" duration="256000" />
     </task>
     <servers />
   </component>
