@@ -43,6 +43,7 @@ class MessageForm extends HTMLElement {
         this.$form = this._shadowRoot.querySelector('form');
         this.$input = this._shadowRoot.querySelector('form-input');
         this.$message = this._shadowRoot.querySelector('.my_message');
+        this.$messages = this._shadowRoot.querySelector('.messages');
 
         this.$form.addEventListener('submit', this._onSubmit.bind(this));
         this.$form.addEventListener('keypress', this._onKeyPress.bind(this));
@@ -50,7 +51,11 @@ class MessageForm extends HTMLElement {
 
     _onSubmit (event) {
         event.preventDefault();
+        //
+
         this.$message.innerText = this.$input.value;
+        this.$messages.innerHTML = this.$message;
+
     }
 
     _onKeyPress (event) {
