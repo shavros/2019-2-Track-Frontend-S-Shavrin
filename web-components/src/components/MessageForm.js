@@ -9,12 +9,18 @@ template.innerHTML = `
             display: flex;
         }
 
-        .result {
-            color: red;
+        .my_message {
+            color: #1f1d1f;
+            background-color: #f3e5f5;
+            padding: 30px;
+            max-width: 70%;
+            display: inline-block;
+            word-wrap: break-word;
         }
         
         .messages {
         height: calc(100vh - 220px);
+        background-color: #a9a9a9;
         }
 
         input[type=submit] {
@@ -23,7 +29,7 @@ template.innerHTML = `
     </style>
     <form>
         <div class="messages">
-            <div class="result"></div>
+            <div class="my_message"></div>
         </div>
         <form-input name="message-text" placeholder="Введите сообщеине"></form-input>
     </form>
@@ -36,7 +42,7 @@ class MessageForm extends HTMLElement {
         this._shadowRoot.appendChild(template.content.cloneNode(true));
         this.$form = this._shadowRoot.querySelector('form');
         this.$input = this._shadowRoot.querySelector('form-input');
-        this.$message = this._shadowRoot.querySelector('.result');
+        this.$message = this._shadowRoot.querySelector('.my_message');
 
         this.$form.addEventListener('submit', this._onSubmit.bind(this));
         this.$form.addEventListener('keypress', this._onKeyPress.bind(this));

@@ -30,7 +30,7 @@ template.innerHTML = `
         }
     </style>
     <input type="text">
-    <div class="attach_button"><i class="fas fa-paperclip"></i></div>
+    <div class="attach_button"></div>
 `;
 
 class FormInput extends HTMLElement {
