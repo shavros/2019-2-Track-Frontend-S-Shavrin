@@ -3,10 +3,18 @@ template.innerHTML = `
     <style>
         form-input {
             width: 100%;
+            height: 110px;
+            box-sizing: border-box;
+            border: 0;
+            display: flex;
         }
 
         .result {
             color: red;
+        }
+        
+        .messages {
+        height: calc(100vh - 220px);
         }
 
         input[type=submit] {
@@ -14,7 +22,9 @@ template.innerHTML = `
         }
     </style>
     <form>
-        <div class="result"></div>
+        <div class="messages">
+            <div class="result"></div>
+        </div>
         <form-input name="message-text" placeholder="Введите сообщеине"></form-input>
     </form>
 `;
