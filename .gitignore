@@ -151,3 +151,7 @@ idea/
 build/
 false/
 img/
+
+web-components/.eslintignore
+web-components/.eslintrc.js
+
