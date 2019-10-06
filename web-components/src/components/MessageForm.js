@@ -137,6 +137,7 @@ class MessageForm extends HTMLElement {
     this.$messages.scrollTop = 9999;
   }
 
+  /* eslint class-methods-use-this:0 */
   messageToLocal(messageObj) {
     let storageMessageArray = JSON.parse(localStorage.getItem(messagesArrayKey));
     if (storageMessageArray === null) {
