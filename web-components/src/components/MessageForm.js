@@ -77,66 +77,65 @@ template.innerHTML = `
 `;
 
 class MessageForm extends HTMLElement {
-    constructor () {
-        super();
-        this._shadowRoot = this.attachShadow({ mode: 'open' });
-        this._shadowRoot.appendChild(template.content.cloneNode(true));
-        this.$form = this._shadowRoot.querySelector('form');
-        this.$input = this._shadowRoot.querySelector('form-input');
-        this.$messages = this._shadowRoot.querySelector('.messages');
-        this.my_render();
+  constructor() {
+    super();
+    this.shadowRoot = this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.$form = this.shadowRoot.querySelector('form');
+    this.$input = this.shadowRoot.querySelector('form-input');
+    this.$messages = this.shadowRoot.querySelector('.messages');
+    this.myRender();
 
-        this.$form.addEventListener('submit', this._onSubmit.bind(this));
-        this.$form.addEventListener('keypress', this._onKeyPress.bind(this));
+    this.$form.addEventListener('submit', this.onSubmit.bind(this));
+    this.$form.addEventListener('keypress', this.onKeyPress.bind(this));
+  }
+
+  onSubmit(event) {
+    event.preventDefault();
+    if (this.$input.value === '') {
+      return;
+    }
+    this.messageObj = {};
+    this.messageObj.messageText = this.$input.value;
+    this.messageObj.messageAuthor = 'Me';
+    this.messageObj.sendingTime = new Date();
+    this.addMessage(this.messageObj);
+    this.$input.value = '';
+    this.messageToLocal(this.messageObj);
+  }
+
+  onKeyPress(event) {
+    if (event.keyCode === 13) {
+      this.$form.dispatchEvent(new Event('submit'));
+    }
+  }
+
+  addMessage(messageObj) {
+    const divFormatMessageContainer = document.createElement('div');
+    const divFormatMessageText = document.createElement('div');
+    const divFormatMessageTime = document.createElement('div');
+
+    if (messageObj.messageAuthor === 'Me') {
+      divFormatMessageContainer.className = 'my_message';
+    } else {
+      divFormatMessageContainer.className = 'contact_message';
     }
 
-    _onSubmit (event) {
-        event.preventDefault();
-        if(this.$input.value === '') {
-          return;
-        }
-        this.messageObj = {};
-        this.messageObj.messageText = this.$input.value;
-        this.messageObj.messageAuthor = 'Me';
-        this.messageObj.sendingTime = new Date();
-        this.addMessage(this.messageObj);
-        this.$input.value = '';
-        this.messageToLocal(this.messageObj);
-    }
+    divFormatMessageText.className = 'message-text';
+    divFormatMessageText.innerText = messageObj.messageText;
+    divFormatMessageTime.className = 'message-time';
+    const date = new Date(messageObj.sendingTime);
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    hours = (hours < 10) ? (`0${hours}`) : hours;
+    minutes = (minutes < 10) ? (`0${minutes}`) : minutes;
+    divFormatMessageTime.innerText = `${hours}:${minutes}`;
 
-    _onKeyPress (event) {
-        if (event.keyCode === 13) {
-            this.$form.dispatchEvent(new Event('submit'));
-        }
-    }
-
-    addMessage(messageObj) {
-      let divFormatMessageContainer = document.createElement('div');
-      let divFormatMessageText = document.createElement('div');
-      let divFormatMessageTime = document.createElement('div');
-
-      if (messageObj.messageAuthor === 'Me') {
-        divFormatMessageContainer.className = 'my_message';
-      }
-      else {
-        divFormatMessageContainer.className = 'contact_message';
-      }
-
-      divFormatMessageText.className = 'message-text';
-      divFormatMessageText.innerText = messageObj.messageText;
-      divFormatMessageTime.className = 'message-time';
-      let date = new Date(messageObj.sendingTime);
-      let hours = date.getHours();
-      let minutes = date.getMinutes();
-      hours = (hours < 10) ? ('0' + hours) : hours;
-      minutes = (minutes < 10) ? ('0' + minutes) : minutes;
-      divFormatMessageTime.innerText = hours + ':' + minutes;
-
-      divFormatMessageContainer.appendChild(divFormatMessageText);
-      divFormatMessageContainer.appendChild(divFormatMessageTime);
-      this.$messages.appendChild(divFormatMessageContainer);
-      this.$messages.scrollTop = 9999;
-    }
+    divFormatMessageContainer.appendChild(divFormatMessageText);
+    divFormatMessageContainer.appendChild(divFormatMessageTime);
+    this.$messages.appendChild(divFormatMessageContainer);
+    this.$messages.scrollTop = 9999;
+  }
 
   messageToLocal(messageObj) {
     let storageMessageArray = JSON.parse(localStorage.getItem(messagesArrayKey));
@@ -148,8 +147,8 @@ class MessageForm extends HTMLElement {
   }
 
 
-  my_render() {
-    let storageMessageArray = JSON.parse(localStorage.getItem(messagesArrayKey));
+  myRender() {
+    const storageMessageArray = JSON.parse(localStorage.getItem(messagesArrayKey));
     if (storageMessageArray === null) {
       return;
     }
@@ -157,7 +156,7 @@ class MessageForm extends HTMLElement {
     for (let i = 0; i < storageMessageArray.length; i += 1) {
       this.addMessage(storageMessageArray[i]);
     }
-    }
+  }
 }
 
 customElements.define('message-form', MessageForm);
