@@ -17,13 +17,23 @@ template.innerHTML = `
             min-width: 20%;
             display: inline-flex;
             flex-direction: column;
-            border: 1px solid #AAA;
             border-radius: 5px;
             margin: 10px;
             justify-content: flex-end;
             align-items: flex-end;
             align-self: flex-end;
-            background-color: #8E24AA55;
+            background-color: #f3e5f5;
+            position: relative;
+        }
+        
+        .my_message::after {
+        content: '';
+        border: 10px solid transparent; 
+        border-bottom: 10px solid #f3e5f5; 
+        border-left: 10px solid #f3e5f5;
+        position: absolute;
+        right: -20px;
+        
         }
         
         .message-text {
@@ -42,6 +52,7 @@ template.innerHTML = `
             font-size: 12px;
             align-self: flex-end;
             line-height: 2.5;
+            margin-right: 20px;
         }
         
         .messages {
@@ -50,7 +61,7 @@ template.innerHTML = `
         flex-direction: column;
         background-color: #F0F0F0;
         overflow-y: scroll;
-            
+        padding: 0 30px 0 30px;
         }
 
         input[type=submit] {
