@@ -155,3 +155,4 @@ img/
 web-components/.eslintignore
 web-components/.eslintrc.js
 
+package-lock.json
