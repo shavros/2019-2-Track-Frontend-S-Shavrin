@@ -1,3 +1,5 @@
+const messagesArrayKey = 'messagesArray';
+
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
@@ -44,7 +46,11 @@ template.innerHTML = `
         
         .messages {
         height: calc(100vh - 220px);
-        background-color: #a9a9a9;
+        display: flex;
+        flex-direction: column;
+        background-color: #F0F0F0;
+        overflow-y: scroll;
+            
         }
 
         input[type=submit] {
