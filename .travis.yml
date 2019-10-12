@@ -8,13 +8,13 @@ before_install:
 script:
   - npm run test
   - npm run build
+  - npm run deploy
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $repo_token
   local_dir: web-components/build
-  script: npm run deploy
   branches:
     only:
       - master
