@@ -149,3 +149,10 @@ jest_*/
 .idea/
 idea/
 build/
+false/
+img/
+
+
+
+
+package-lock.json
