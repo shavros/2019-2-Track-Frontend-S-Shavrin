@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+  height: 100vh;
 }
 
 *,
@@ -20,66 +21,8 @@ body {
   flex-direction: column;
 }
 
-.dialog_header {
-  height: 110px;
-  width: 100%;
-  background-color: #8e24aa;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 30px;
-}
 
-.message_form {
-  flex-grow: 2;
-}
 
-.back_button {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
 
-.contact_info {
-  height: 100%;
-  display: flex;
-}
 
-.contact_logo {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  margin-right: 35px;
-}
 
-.contact_info_more {
-  height: 100%;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-.contact_name {
-  line-height: 35px;
-  font-size: 35px;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.contact_status {
-  margin: 0;
-  font-size: 15px;
-  color: #d1a7dd;
-}
-
-.search_button {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.settings_button {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
