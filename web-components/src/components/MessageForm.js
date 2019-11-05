@@ -3,7 +3,6 @@ const messagesArrayKey = 'messagesArray';
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
-        
         form-input {
             width: 100%;
             height: 110px;

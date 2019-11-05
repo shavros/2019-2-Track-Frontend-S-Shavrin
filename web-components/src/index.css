@@ -21,7 +21,9 @@ body {
   flex-direction: column;
 }
 
-
+message-form {
+  display: none;
+}
 
 
 
