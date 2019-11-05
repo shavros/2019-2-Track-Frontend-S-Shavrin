@@ -1,3 +1,5 @@
+const messagesArrayKey = 'messagesArray';
+
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
@@ -96,6 +98,13 @@ class ChatBlock extends HTMLElement {
     super();
     this.shadowRoot = this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.getInfo();
+  }
+
+  getInfo() {
+    const storageMessageArray = JSON.parse(localStorage.getItem(messagesArrayKey));
+    this.shadowRoot.querySelector('.last_message').innerText = storageMessageArray[storageMessageArray.length - 1].messageText;
+    this.shadowRoot.querySelector('.last_time').innerText = storageMessageArray[storageMessageArray.length - 1].sendingTime;
   }
 }
 
