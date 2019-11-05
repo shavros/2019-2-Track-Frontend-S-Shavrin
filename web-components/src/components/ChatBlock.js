@@ -43,6 +43,7 @@ template.innerHTML = `
   .last_time {
   font-size: 20px;
   margin-bottom: 15px;
+  max-width: 100%;
   }
   
   .message_status {
