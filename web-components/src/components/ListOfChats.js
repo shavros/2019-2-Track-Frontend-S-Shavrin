@@ -27,9 +27,17 @@ template.innerHTML = `
         height: calc(100vh - 110px);
         overflow-y: scroll;
     }
+    
+    chat-block {
+        width: 100%;
+        height: 145px;
+        display: flex;
+    }
 </style>
   <list-header></list-header>
-  <div class="chats_container"></div>
+  <div class="chats_container">
+    <chat-block></chat-block>
+</div>
   <div class="new_message_button">
   <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 \t width="50px" height="50px" fill="#7c6622" viewBox="0 0 528.899 528.899"
@@ -49,6 +57,14 @@ class ListOfChats extends HTMLElement {
     super();
     this.shadowRoot = this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.$chat = this.shadowRoot.querySelector('chat-block');
+
+    this.$chat.addEventListener('click', this.onChatClick.bind(this));
+  }
+
+  onChatClick() {
+    document.querySelector('message-form').classList.remove('unwatch');
+    document.querySelector('list-of-chats').classList.add('unwatch');
   }
 }
 

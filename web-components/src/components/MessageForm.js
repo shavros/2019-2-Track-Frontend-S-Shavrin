@@ -206,10 +206,17 @@ class MessageForm extends HTMLElement {
     this.$form = this.shadowRoot.querySelector('form');
     this.$input = this.shadowRoot.querySelector('form-input');
     this.$messages = this.shadowRoot.querySelector('.messages');
+    this.$back = this.shadowRoot.querySelector('.back_button');
     this.myRender();
 
     this.$form.addEventListener('submit', this.onSubmit.bind(this));
     this.$form.addEventListener('keypress', this.onKeyPress.bind(this));
+    this.$back.addEventListener('click', this.onBackClick.bind(this));
+  }
+
+  onBackClick() {
+    document.querySelector('message-form').classList.add('unwatch');
+    document.querySelector('list-of-chats').classList.remove('unwatch');
   }
 
   onSubmit(event) {
