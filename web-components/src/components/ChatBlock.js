@@ -104,8 +104,8 @@ class ChatBlock extends HTMLElement {
 
   getInfo() {
     const storageMessageArray = JSON.parse(localStorage.getItem(messagesArrayKey));
-    this.shadowRoot.querySelector('.last_message').innerText = storageMessageArray[storageMessageArray.length - 1].messageText;
-    this.shadowRoot.querySelector('.last_time').innerText = storageMessageArray[storageMessageArray.length - 1].sendingTime;
+    this.shadowRoot.querySelector('.last_message').textContent = storageMessageArray[storageMessageArray.length - 1].messageText;
+    this.shadowRoot.querySelector('.last_time').textContent = storageMessageArray[storageMessageArray.length - 1].sendingTime;
   }
 }
 

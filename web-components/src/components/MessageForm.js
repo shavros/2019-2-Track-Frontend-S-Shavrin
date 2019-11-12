@@ -1,7 +1,5 @@
 const messagesArrayKey = 'messagesArray';
 
-let storageMessageArray = JSON.parse(localStorage.getItem(messagesArrayKey));
-
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
@@ -219,8 +217,8 @@ class MessageForm extends HTMLElement {
   onBackClick() {
     document.querySelector('message-form').classList.add('unwatch');
     document.querySelector('list-of-chats').classList.remove('unwatch');
-    document.querySelector('.last_message').innerText = storageMessageArray[storageMessageArray.length - 1].messageText;
-    document.querySelector('.last_time').innerText = storageMessageArray[storageMessageArray.length - 1].sendingTime;
+    document.querySelector('list-of-chats').shadowRoot.querySelector('chat-block').shadowRoot.querySelector('.last_message').textContent = this.messageObj.messageText;
+    document.querySelector('list-of-chats').shadowRoot.querySelector('chat-block').shadowRoot.querySelector('.last_time').textContent = this.messageObj.sendingTime;
   }
 
   onSubmit(event) {
@@ -272,6 +270,7 @@ class MessageForm extends HTMLElement {
 
   /* eslint class-methods-use-this:0 */
   messageToLocal(messageObj) {
+    let storageMessageArray = JSON.parse(localStorage.getItem(messagesArrayKey));
     if (storageMessageArray === null) {
       storageMessageArray = [];
     }
@@ -281,6 +280,7 @@ class MessageForm extends HTMLElement {
 
 
   myRender() {
+    const storageMessageArray = JSON.parse(localStorage.getItem(messagesArrayKey));
     if (storageMessageArray === null) {
       return;
     }

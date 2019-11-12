@@ -62,6 +62,7 @@ class ListOfChats extends HTMLElement {
     this.$chat.addEventListener('click', this.onChatClick.bind(this));
   }
 
+  /* eslint class-methods-use-this:0 */
   onChatClick() {
     document.querySelector('message-form').classList.remove('unwatch');
     document.querySelector('list-of-chats').classList.add('unwatch');
