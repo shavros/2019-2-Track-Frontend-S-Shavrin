@@ -105,7 +105,9 @@ class ChatBlock extends HTMLElement {
   getInfo() {
     const storageMessageArray = JSON.parse(localStorage.getItem(messagesArrayKey));
     this.shadowRoot.querySelector('.last_message').textContent = storageMessageArray[storageMessageArray.length - 1].messageText;
-    this.shadowRoot.querySelector('.last_time').textContent = storageMessageArray[storageMessageArray.length - 1].sendingTime;
+    const minutes = storageMessageArray[storageMessageArray.length - 1].sendingTime.getMinutes();
+    const hours = storageMessageArray[storageMessageArray.length - 1].sendingTime.getHours();
+    this.shadowRoot.querySelector('.last_time').innerText = `${hours}:${minutes}`;
   }
 }
 

@@ -218,7 +218,9 @@ class MessageForm extends HTMLElement {
     document.querySelector('message-form').classList.add('unwatch');
     document.querySelector('list-of-chats').classList.remove('unwatch');
     document.querySelector('list-of-chats').shadowRoot.querySelector('chat-block').shadowRoot.querySelector('.last_message').textContent = this.messageObj.messageText;
-    document.querySelector('list-of-chats').shadowRoot.querySelector('chat-block').shadowRoot.querySelector('.last_time').textContent = this.messageObj.sendingTime;
+    const minutes = this.messageObj.sendingTime.getMinutes();
+    const hours = this.messageObj.sendingTime.getHours();
+    document.querySelector('list-of-chats').shadowRoot.querySelector('chat-block').shadowRoot.querySelector('.last_time').innerText = `${hours}:${minutes}`;
   }
 
   onSubmit(event) {
