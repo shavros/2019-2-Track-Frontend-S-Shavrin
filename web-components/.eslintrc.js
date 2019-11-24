@@ -1,3 +1,4 @@
+/*eslint jsx-a11y/control-has-associated-label:0*/
 module.exports = {
   /*env: {
     browser: true,
