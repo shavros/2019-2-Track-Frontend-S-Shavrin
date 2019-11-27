@@ -3,7 +3,7 @@ node_js:
   - "stable"
 
 before_install:
-  - cd web-components
+  - cd web-components/
 
 script:
   - npm run test
