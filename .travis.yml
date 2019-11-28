@@ -10,7 +10,7 @@ script:
   - npm run build
 
 deploy:
-  provider: pages
+  provider: gh-pages
   skip_cleanup: true
   github_token: $repo_token
   local_dir: web-components/build
