@@ -3,7 +3,6 @@ const messagesArrayKey = 'messagesArray';
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
-        
         form-input {
             width: 100%;
             height: 110px;
@@ -207,10 +206,21 @@ class MessageForm extends HTMLElement {
     this.$form = this.shadowRoot.querySelector('form');
     this.$input = this.shadowRoot.querySelector('form-input');
     this.$messages = this.shadowRoot.querySelector('.messages');
+    this.$back = this.shadowRoot.querySelector('.back_button');
     this.myRender();
 
     this.$form.addEventListener('submit', this.onSubmit.bind(this));
     this.$form.addEventListener('keypress', this.onKeyPress.bind(this));
+    this.$back.addEventListener('click', this.onBackClick.bind(this));
+  }
+
+  onBackClick() {
+    document.querySelector('message-form').classList.add('unwatch');
+    document.querySelector('list-of-chats').classList.remove('unwatch');
+    document.querySelector('list-of-chats').shadowRoot.querySelector('chat-block').shadowRoot.querySelector('.last_message').textContent = this.messageObj.messageText;
+    const minutes = this.messageObj.sendingTime.getMinutes();
+    const hours = this.messageObj.sendingTime.getHours();
+    document.querySelector('list-of-chats').shadowRoot.querySelector('chat-block').shadowRoot.querySelector('.last_time').innerText = `${hours}:${minutes}`;
   }
 
   onSubmit(event) {

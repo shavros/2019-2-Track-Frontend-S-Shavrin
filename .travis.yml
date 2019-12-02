@@ -3,7 +3,7 @@ node_js:
   - "stable"
 
 before_install:
-  - cd web-components
+  - cd web-components/
 
 script:
   - npm run test
@@ -15,4 +15,7 @@ deploy:
   github_token: $repo_token
   local_dir: web-components/build
   on:
-    all_branches: true
+    branch
+    - master
+    - devel
+    - hometask3
