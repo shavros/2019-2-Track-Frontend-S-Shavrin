@@ -18,4 +18,5 @@ deploy:
     branch
     - master
     - devel
+    - hometask3
     - hometask4
