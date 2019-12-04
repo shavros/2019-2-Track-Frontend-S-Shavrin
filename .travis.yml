@@ -17,6 +17,7 @@ deploy:
   on:
     branch
     - master
+    - gh-pages
     - devel
     - hometask3
     - hometask4
