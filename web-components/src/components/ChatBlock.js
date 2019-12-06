@@ -31,6 +31,16 @@ template.innerHTML = `
   
   .last_message {
   font-size: 20px;
+  animation: neeew 3s;
+  }
+  
+  @keyframes neeew {
+    0% {
+    color: white;
+    }
+    100% {
+    color: black;
+    }
   }
   
   .other_info {

@@ -18,9 +18,33 @@ template.innerHTML = `
         background-color: #ffd54f;
         width: 110px;
         height: 110px;
-        border-radius: 55px;
+        border-radius: 50%;
         right: 50px;
         bottom: 50px; 
+        animation: pulse 2s infinite;
+    }
+    
+    .new_message_button:hover {
+        animation: none;
+        background-color: #0074D9;
+        transition: all 2s;
+    }
+    
+    @keyframes pulse {
+        0% {
+        width: 110px;
+        height: 110px;;
+        }
+        70% {
+        width: 150px;
+        height: 150px;
+        background-color: #0074D9;
+        }
+        100% {
+        width: 110px;
+        height: 110px;
+        background-color: #ffd54f;
+        }
     }
     
     .chats_container {
@@ -32,6 +56,12 @@ template.innerHTML = `
         width: 100%;
         height: 145px;
         display: flex;
+        transition: background-color 1s;
+    }
+    
+    chat-block:hover {
+        background-color: lightgrey;
+        transition: all 2s;
     }
 </style>
   <list-header></list-header>

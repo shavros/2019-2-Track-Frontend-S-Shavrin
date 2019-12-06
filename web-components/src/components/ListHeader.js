@@ -6,7 +6,14 @@ template.innerHTML = `
         color: white;
         font-weight: 600;
         width: 75%;
-    }  
+        transition: all 1s;
+    } 
+    
+    .app_name:hover {
+        color: yellow;
+        font-size: 45px;
+        transition: all 3s;
+    } 
     
   </style>
   <div class="burger_menu">

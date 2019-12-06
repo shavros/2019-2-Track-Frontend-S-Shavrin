@@ -15,8 +15,7 @@ deploy:
   github_token: $repo_token
   local_dir: web-components/build
   on:
-    branch
+    branch:
     - master
     - devel
-    - hometask3
     - hometask4
