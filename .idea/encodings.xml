@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/web-components/src/img/back.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-components/src/img/menu-button.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-components/src/img/more.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-components/src/img/pencil-edit-button.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-components/src/img/search.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-components/src/img/tick.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-components/src/img/user.svg" charset="UTF-8" />
+  </component>
+</project>

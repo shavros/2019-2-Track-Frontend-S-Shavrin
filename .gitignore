@@ -145,14 +145,3 @@ flow-typed/
 docs/_book/
 jest_*/
 .jscpd/
-
-.idea/
-idea/
-build/
-false/
-img/
-
-
-
-
-package-lock.json
