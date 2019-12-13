@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/your_repo_name/static/css/main.b78f77ae.chunk.css",
-    "main.js": "/your_repo_name/static/js/main.f23fabfc.chunk.js",
-    "main.js.map": "/your_repo_name/static/js/main.f23fabfc.chunk.js.map",
+    "main.js": "/your_repo_name/static/js/main.aaafbbd4.chunk.js",
+    "main.js.map": "/your_repo_name/static/js/main.aaafbbd4.chunk.js.map",
     "runtime-main.js": "/your_repo_name/static/js/runtime-main.5cedb39b.js",
     "runtime-main.js.map": "/your_repo_name/static/js/runtime-main.5cedb39b.js.map",
     "static/js/2.96720d5a.chunk.js": "/your_repo_name/static/js/2.96720d5a.chunk.js",
     "static/js/2.96720d5a.chunk.js.map": "/your_repo_name/static/js/2.96720d5a.chunk.js.map",
     "index.html": "/your_repo_name/index.html",
-    "precache-manifest.35ea6611c5c673718940b57fb3dfd321.js": "/your_repo_name/precache-manifest.35ea6611c5c673718940b57fb3dfd321.js",
+    "precache-manifest.d78689577b88abdbf72793a31247d51b.js": "/your_repo_name/precache-manifest.d78689577b88abdbf72793a31247d51b.js",
     "service-worker.js": "/your_repo_name/service-worker.js",
     "static/css/main.b78f77ae.chunk.css.map": "/your_repo_name/static/css/main.b78f77ae.chunk.css.map",
     "static/media/audiorecordstart_button.799dbb14.svg": "/your_repo_name/static/media/audiorecordstart_button.799dbb14.svg",
