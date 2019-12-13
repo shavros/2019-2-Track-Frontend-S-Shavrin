@@ -148,3 +148,7 @@ jest_*/
 
 build/
 .idea/
+.idea
+idea/
+idea
+.idea/workspace.xml
