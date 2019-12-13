@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a99182b8-a4e4-4d74-bb16-ad5f238a258f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.95edac10b67346e1969d28a11038ef2f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.b4eae362.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.b4eae362.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.5b4507f4.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.5b4507f4.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.efac59f4.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.efac59f4.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/runtime-main.6c11eb20.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/runtime-main.6c11eb20.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/logo.795fb555.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/counter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Counter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/ActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CounterContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/counter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/storeDev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/storeProd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globalStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globalStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/CounterContainer.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/convertBytesToHuman.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/convertBytesToHuman.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/correctSentence.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/correctSentence.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/nonUniqueElements.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/nonUniqueElements.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/serviceWorker.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +81,7 @@
       <workItem from="1574617889252" duration="5365000" />
       <workItem from="1574878573303" duration="2890000" />
       <workItem from="1575321882836" duration="1956000" />
-      <workItem from="1576193587823" duration="2779000" />
+      <workItem from="1576193587823" duration="3383000" />
     </task>
     <servers />
   </component>
