@@ -43,9 +43,9 @@
   "globals": {
     "DEBUG": false
   },
-  "rules": {
+  "rules": {	  
     "semi": [
-      2,
+      1,
       "never"
     ],
     "import/no-named-as-default": 0,
