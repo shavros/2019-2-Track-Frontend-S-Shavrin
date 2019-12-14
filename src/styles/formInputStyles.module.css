@@ -19,53 +19,55 @@
 }
 
 .attach_button {
-	background-color: inherit;
-	display: inline-block;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	border-radius: 100%;
-	transition: 0.2s;
-	color: rgb(136, 136, 136);
-
-	&:focus {
-		color: rgba(136, 136, 136, 0.8);
-	}
-
-	&:hover {
-		color: rgba(136, 136, 136, 0.7);
-	}
-
-	&:active {
-		background: rgba(0, 0, 0, 0.2);
-	}
+  background-color: inherit;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  transition: 0.2s;
+  color: rgb(136, 136, 136);
 }
+
+.attach_button:focus {
+  color: rgba(136, 136, 136, 0.8);
+}
+
+.attach_button:hover {
+  color: rgba(136, 136, 136, 0.7);
+}
+
+.attach_button:active {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 
 .submit_button {
-	display: none;
-	background-color: inherit;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	border-radius: 100%;
-	color: var(--main-bg-color);
-	overflow: hidden;
-	animation-name: show-submit-button;
-	animation-duration: 0.1s;
-	animation-timing-function: linear;
-
-	&:focus {
-		color: rgba(142, 36, 170, 0.8);
-	}
-
-	&:hover {
-		color: rgba(142, 36, 170, 0.7);
-	}
-
-	&:active {
-		background: rgba(0, 0, 0, 0.2);
-	}
+  display: none;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  color: var(--main-bg-color);
+  overflow: hidden;
+  animation-name: show-submit-button;
+  animation-duration: 0.1s;
+  animation-timing-function: linear;
 }
+
+.submit_button:focus {
+  color: rgba(142, 36, 170, 0.8);
+}
+
+.submit_button:hover {
+  color: rgba(142, 36, 170, 0.7);
+}
+
+.submit_button:active {
+		background: rgba(0, 0, 0, 0.2);
+}
+
 
 .attach_button_img {
 	height: 5vh;
