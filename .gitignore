@@ -146,13 +146,10 @@ docs/_book/
 jest_*/
 .jscpd/
 
-.idea/
-idea/
 build/
-false/
-img/
+.idea/
+.idea
+idea/
+idea
+.idea/workspace.xml
 
-
-
-
-package-lock.json
