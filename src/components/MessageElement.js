@@ -47,6 +47,7 @@ function MessageContent(props) {
 		);
 	} else if (props.contentType === 'audio') {
 		content = (
+      // eslint-disable-next-line jsx-a11y/media-has-caption
 			<audio
 				src={props.messageContent}
 				controls

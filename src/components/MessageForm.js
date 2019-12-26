@@ -17,6 +17,7 @@ export default function MessageForm(props) {
 	function preventAndStop(event) {
 		event.stopPropagation();
 		event.preventDefault();
+    // eslint-disable-next-line no-param-reassign
 		event.dataTransfer.dropEffect = 'copy';
 	}
 

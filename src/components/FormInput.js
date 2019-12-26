@@ -6,7 +6,6 @@ import styles from '../styles/formInputStyles.module.css';
 import { ReactComponent as SubmitSvg } from '../images/forminput_buttons/submit_button.svg';
 
 export default function FormInput(props) {
-	const imgInput = React.createRef();
 
 	return (
 		<div className={styles.form_input}>
