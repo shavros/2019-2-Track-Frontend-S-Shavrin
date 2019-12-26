@@ -13,8 +13,12 @@ export default function MessageForm(props) {
 	const [inputValue, setInputValue] = useState('');
 	const [messages, setMessages] = useState(messagesInit);
 
-/* eslint indent:0 */
-/* eslint no-tabs:0 */
+
+	function preventAndStop(event) {
+		event.stopPropagation();
+		event.preventDefault();
+		event.dataTransfer.dropEffect = 'copy';
+	}
 
 
 	function handleChange(event) {
@@ -41,17 +45,17 @@ export default function MessageForm(props) {
 		messageToLocal(messageObj);
 	}
 
-  function messagesInit() {
-    const storageChatArray = JSON.parse(localStorage.getItem(chatsArrayKey));
-    const chatObj = storageChatArray[chatId];
-    const messagesInitArray = [];
+	function messagesInit() {
+		const storageChatArray = JSON.parse(localStorage.getItem(chatsArrayKey));
+		const chatObj = storageChatArray[chatId];
+		const messagesInitArray = [];
 
-    for (let i = 0; i < chatObj.messages.length; i += 1) {
-      messagesInitArray.push(chatObj.messages[i]);
-    }
+		for (let i = 0; i < chatObj.messages.length; i += 1) {
+			messagesInitArray.push(chatObj.messages[i]);
+		}
 
-    return messagesInitArray;
-  }
+		return messagesInitArray;
+	}
 
 	function createMessageObj(messageContent, contentType = 'text') {
 		const messageObj = {
@@ -114,8 +118,10 @@ export default function MessageForm(props) {
 			<form className={styles.form_chat} onSubmit={handleSubmit}>
 				<div
 					className={styles.chat_container}
+					onDragEnter={preventAndStop}
+					onDragOver={preventAndStop}
 				>
-          {messagesReact()}
+					{messagesReact()}
 				</div>
 				<FormInput
 					placeholder="Сообщение"
