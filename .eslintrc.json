@@ -43,7 +43,7 @@
   "globals": {
     "DEBUG": false
   },
-  "rules": {	  
+  "rules": {
     "semi": [
       1,
       "never"

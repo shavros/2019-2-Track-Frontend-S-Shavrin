@@ -46,19 +46,18 @@ function MessageContent(props) {
 			/>
 		);
 	} else if (props.contentType === 'audio') {
-    /* eslint no-tabs:0 */
-    content = (
-/* eslint jsx-a11y/media-has-caption:0 */
-      <audio
-        src={props.messageContent}
-        controls
-        className={styles.audio}
-        onLoad={() => {
-          window.URL.revokeObjectURL(props.messageContent)
-        }}
-      />
-    )
-  }
+		content = (
+      // eslint-disable-next-line jsx-a11y/media-has-caption
+			<audio
+				src={props.messageContent}
+				controls
+				className={styles.audio}
+				onLoad={() => {
+					window.URL.revokeObjectURL(props.messageContent);
+				}}
+			/>
+		);
+	}
 
 	return content;
 }
