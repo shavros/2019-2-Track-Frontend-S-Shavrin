@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/2019-2-Track-Frontend-S-Shavrin/static/css/main.b78f77ae.chunk.css",
+    "main.js": "/2019-2-Track-Frontend-S-Shavrin/static/js/main.a1e6e396.chunk.js",
+    "main.js.map": "/2019-2-Track-Frontend-S-Shavrin/static/js/main.a1e6e396.chunk.js.map",
+    "runtime-main.js": "/2019-2-Track-Frontend-S-Shavrin/static/js/runtime-main.8c42553d.js",
+    "runtime-main.js.map": "/2019-2-Track-Frontend-S-Shavrin/static/js/runtime-main.8c42553d.js.map",
+    "static/js/2.5aa64ac4.chunk.js": "/2019-2-Track-Frontend-S-Shavrin/static/js/2.5aa64ac4.chunk.js",
+    "static/js/2.5aa64ac4.chunk.js.map": "/2019-2-Track-Frontend-S-Shavrin/static/js/2.5aa64ac4.chunk.js.map",
+    "index.html": "/2019-2-Track-Frontend-S-Shavrin/index.html",
+    "precache-manifest.524ae3d147fc12944225dc75c39af3cd.js": "/2019-2-Track-Frontend-S-Shavrin/precache-manifest.524ae3d147fc12944225dc75c39af3cd.js",
+    "service-worker.js": "/2019-2-Track-Frontend-S-Shavrin/service-worker.js",
+    "static/css/main.b78f77ae.chunk.css.map": "/2019-2-Track-Frontend-S-Shavrin/static/css/main.b78f77ae.chunk.css.map",
+    "static/js/2.5aa64ac4.chunk.js.LICENSE": "/2019-2-Track-Frontend-S-Shavrin/static/js/2.5aa64ac4.chunk.js.LICENSE",
+    "static/media/audiorecordstart_button.799dbb14.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/audiorecordstart_button.799dbb14.svg",
+    "static/media/audiorecordstop_button.36239a46.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/audiorecordstop_button.36239a46.svg",
+    "static/media/backward_button.a0a4db7f.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/backward_button.a0a4db7f.svg",
+    "static/media/companion_logo.3664fbdc.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/companion_logo.3664fbdc.svg",
+    "static/media/createchat_button.35407f34.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/createchat_button.35407f34.svg",
+    "static/media/double_tick.fd88921a.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/double_tick.fd88921a.svg",
+    "static/media/edit_profile_img.ce4052ff.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/edit_profile_img.ce4052ff.svg",
+    "static/media/geolocation_button.46967ed6.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/geolocation_button.46967ed6.svg",
+    "static/media/imgupload_button.3520e662.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/imgupload_button.3520e662.svg",
+    "static/media/menu_button.b11b5f29.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/menu_button.b11b5f29.svg",
+    "static/media/search_button.6608f2b8.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/search_button.6608f2b8.svg",
+    "static/media/settings_button.90709bf0.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/settings_button.90709bf0.svg",
+    "static/media/submit_button.5a87552b.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/submit_button.5a87552b.svg",
+    "static/media/tick.f0b9c312.svg": "/2019-2-Track-Frontend-S-Shavrin/static/media/tick.f0b9c312.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c42553d.js",
+    "static/js/2.5aa64ac4.chunk.js",
+    "static/css/main.b78f77ae.chunk.css",
+    "static/js/main.a1e6e396.chunk.js"
+  ]
+}
