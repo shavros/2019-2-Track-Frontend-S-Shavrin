@@ -13,6 +13,99 @@ export default function MessageForm(props) {
 	const [inputValue, setInputValue] = useState('');
 	const [messages, setMessages] = useState(messagesInit);
 
+	function handleImage(event, files = event.target.files) {
+		if (files.length) {
+			const data = new FormData();
+			const src = window.URL.createObjectURL(files[0]);
+			data.append('image', files);
+			/*
+			for (let i = 0; i < files.length; i += 1) {
+				src[i] = window.URL.createObjectURL(files[i]);
+				data.append('image', files[i]);
+			}
+			*/
+			const messageObj = createMessageObj(src, 'img');
+			addMessage(messageObj);
+			fetch('https://tt-front.now.sh/upload', {
+				method: 'POST',
+				body: data,
+			});
+		}
+	}
+
+	function handleRecordStart() {
+		function manageEnter(enable) {
+			const input = document.getElementById('input');
+			const buttonImage = document.getElementById('bImage');
+			const buttonGeo = document.getElementById('bGeo');
+
+			if (enable === false) {
+				input.disabled = true;
+				buttonImage.disabled = true;
+				buttonGeo.disabled = true;
+			} else {
+				input.removeAttribute('disabled');
+				buttonImage.removeAttribute('disabled');
+				buttonGeo.removeAttribute('disabled');
+			}
+		}
+
+		function recordAudio(stream) {
+			const buttonStart = document.getElementById('start');
+			const buttonStop = document.getElementById('stop');
+			const mediaRecorder = new MediaRecorder(stream);
+			mediaRecorder.start();
+
+			buttonStop.style.display = 'block';
+			buttonStart.style.display = 'none';
+
+			manageEnter(false);
+
+			let chunks = [];
+
+			mediaRecorder.addEventListener('dataavailable', (event) => {
+				chunks.push(event.data);
+			});
+
+			mediaRecorder.addEventListener('stop', () => {
+				const blob = new Blob(chunks, { type: mediaRecorder.mimeType });
+				chunks = [];
+				const audioURL = URL.createObjectURL(blob);
+				addMessage(createMessageObj(audioURL, 'audio'));
+				const data = new FormData();
+				data.append('audio', blob);
+				fetch('https://tt-front.now.sh/upload', {
+					method: 'POST',
+					body: data,
+				});
+			});
+
+			buttonStop.addEventListener(
+				'click',
+				() => {
+					mediaRecorder.stop();
+					buttonStop.style.display = 'none';
+					buttonStart.style.display = 'block';
+					manageEnter(true);
+				},
+				{ once: true },
+			);
+		}
+
+		async function getMedia() {
+			let stream = null;
+
+			try {
+				const constraints = { audio: true };
+				stream = await navigator.mediaDevices.getUserMedia(constraints);
+				recordAudio(stream);
+			} catch (error) {
+				console.log(error.message);
+			}
+		}
+
+		getMedia();
+	}
 
 	function preventAndStop(event) {
 		event.stopPropagation();
@@ -21,6 +114,11 @@ export default function MessageForm(props) {
 		event.dataTransfer.dropEffect = 'copy';
 	}
 
+	function drop(event) {
+		preventAndStop(event);
+		const { files } = event.dataTransfer;
+		handleImage(event, files);
+	}
 
 	function handleChange(event) {
 		const { value } = event.target;
@@ -44,6 +142,32 @@ export default function MessageForm(props) {
 		setInputValue('');
 		addMessage(messageObj);
 		messageToLocal(messageObj);
+	}
+
+	function handleAttachGeo() {
+		if ('geolocation' in navigator) {
+			const geoSuccess = (position) => {
+				const { latitude, longitude } = position.coords;
+				const pos = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+				const messageObj = createMessageObj(pos);
+				addMessage(messageObj);
+				messageToLocal(messageObj);
+			};
+
+			const geoError = (error) => {
+				console.log(error.message);
+			};
+
+			const geoOptions = {
+				enableHighAccuracy: true,
+				maximumAge: 30000,
+				timeout: 27000,
+			};
+
+			navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
+		} else {
+			alert('Your browser does not support geolocation!');
+		}
 	}
 
 	function messagesInit() {
@@ -121,6 +245,7 @@ export default function MessageForm(props) {
 					className={styles.chat_container}
 					onDragEnter={preventAndStop}
 					onDragOver={preventAndStop}
+					onDrop={drop}
 				>
 					{messagesReact()}
 				</div>
@@ -129,6 +254,9 @@ export default function MessageForm(props) {
 					value={inputValue}
 					onChange={handleChange}
 					submitButtonDisplayStyle={submitButtonDisplayStyle}
+					attachFunc={handleAttachGeo}
+					handleImage={handleImage}
+					handleRecordStart={handleRecordStart}
 				/>
 			</form>
 		</div>
